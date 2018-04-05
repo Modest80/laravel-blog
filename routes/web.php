@@ -11,6 +11,14 @@
 |
 */
 
+Route::group(['prefix' => 'prof', 'namespace' => 'Prof', 'middleware' => ['auth']], function() {
+  Route::get('/', 'ProfileAdminController@dashboard')->name('prof.index');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
