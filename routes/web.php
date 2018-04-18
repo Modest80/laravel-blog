@@ -13,6 +13,7 @@
 
 Route::group(['prefix' => 'prof', 'namespace' => 'Prof', 'middleware' => ['auth']], function() {
   Route::get('/', 'ProfileAdminController@dashboard')->name('prof.index');
+  Route::resource('/category', 'CategoryController', ['as'=>'prof']);
 });
 
 Route::get('/', function () {

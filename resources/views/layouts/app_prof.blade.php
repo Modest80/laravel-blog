@@ -16,6 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -37,6 +38,7 @@
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Участники</a>
                         <ul class="dropdown-menu" role="menu">
+                          <li><a href="{{route('prof.category.index')}}" class="dropdown-item">Категории</a></li>
                           <li><a href="#" class="dropdown-item">Профессии</a></li>
                           <li><a href="#" class="dropdown-item">Специализации</a></li>
                           <li><a href="#" class="dropdown-item">Профили</a></li>
