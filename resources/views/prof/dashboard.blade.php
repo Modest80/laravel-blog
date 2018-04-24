@@ -44,11 +44,11 @@
      </div>
 
      <div class="col-sm-6">
-       <a class="btn btn-block btn-default" href="#">Создать специализацию</a>
+       <a class="btn btn-block btn-default" href="{{route('prof.category.create')}}">Создать категорию</a>
        <a class="list-group-item" href="#">
-         <h4 class="list-group-item-heading">Последняя специализация</h4>
+         <h4 class="list-group-item-heading">Последняя категория</h4>
          <p class="list-group-item-text">
-           Специализация:
+           Категории:
          </p>
        </a>
      </div>

@@ -4,14 +4,14 @@
 
 <div class="container">
   @component('prof.components.breadcrumb')
-    @slot('title') Список категорий @endslot
+    @slot('title') Список статей @endslot
     @slot('parent') Главная @endslot
-    @slot('active') Категории @endslot
+    @slot('active') Статьи @endslot
   @endcomponent
     <hr />
 
-    <a href="{{route('prof.category.create')}}" class="btn btn-primary pull-right">
-    <i class="fa fa-plus-square-o"></i> Создать категорию</a>
+    <a href="{{route('prof.article.create')}}" class="btn btn-primary pull-right">
+    <i class="fa fa-plus-square-o"></i> Создать статью</a>
 
     <table class="table table-striped">
       <thead>
@@ -20,16 +20,16 @@
         <th class="text-right">Действие</th>
       </thead>
       <tbody>
-        @forelse ($categories as $category)
+        @forelse ($articles as $article)
           <tr>
-            <td>{{$category->title}}</td>
-            <td>{{$category->published}}</td>
+            <td>{{$article->title}}</td>
+            <td>{{$article->published}}</td>
             <td class="text-right">
-              <form onsubmit="if(confirm('Удалить?')){ return true } else { return false }" class="" action="{{route('prof.category.destroy', $category)}}" method="post">
+              <form onsubmit="if(confirm('Удалить?')){ return true } else { return false }" class="" action="{{route('prof.article.destroy', $article)}}" method="post">
                 <input type="hidden" name="_method" value="DELETE">
                 {{ csrf_field() }}
                 <button type="submit" class="btn" name="button"><i class="fa fa-trash-o"></i></button>
-                <a class="btn btn-default" href="{{route('prof.category.edit', $category)}}"><i class="fa fa-edit"></i></a>
+                <a class="btn btn-default" href="{{route('prof.article.edit', $article)}}"><i class="fa fa-edit"></i></a>
               </form>
             </td>
           </tr>
@@ -43,7 +43,7 @@
         <tr>
           <td colspan="3">
              <ul class="pagination pull-right">
-               {{$categories->links()}}
+               {{$articles->links()}}
              </ul>
           </td>
         </tr>

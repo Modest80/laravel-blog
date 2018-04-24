@@ -39,6 +39,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Участники</a>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="{{route('prof.category.index')}}" class="dropdown-item">Категории</a></li>
+                          <li><a href="{{route('prof.article.index')}}" class="dropdown-item">Статьи</a></li>
                           <li><a href="#" class="dropdown-item">Профессии</a></li>
                           <li><a href="#" class="dropdown-item">Специализации</a></li>
                           <li><a href="#" class="dropdown-item">Профили</a></li>
